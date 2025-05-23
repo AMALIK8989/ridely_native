@@ -1,50 +1,123 @@
-# Welcome to your Expo app 👋
+# Ridely - Uber-like App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Ridely is a modern ride-sharing application built with React Native and Expo, designed to work on both iOS and Android platforms. The app features separate dashboards for users (riders) and drivers, real-time location tracking, and seamless ride management.
 
-## Get started
+## Features
 
-1. Install dependencies
+### User (Rider) Features
+- User authentication and profile management
+- Real-time location tracking
+- Request rides with pickup and destination selection
+- Choose available drivers
+- Schedule rides for later
+- View ride history
+- Real-time ride status updates
+- Payment integration (coming soon)
 
-   ```bash
-   npm install
-   ```
+### Driver Features
+- Driver authentication and profile management
+- Toggle availability status
+- Accept or reject ride requests
+- Navigation to pickup and destination
+- Complete rides and view earnings
+- Track ride history
 
-2. Start the app
+## Technology Stack
 
-   ```bash
-   npx expo start
-   ```
+- **Frontend**: React Native, Expo
+- **Navigation**: React Navigation
+- **Maps & Location**: Google Maps API, Expo Location
+- **Authentication & Database**: Firebase Authentication, Firestore
+- **State Management**: React Context API
+- **Real-time Updates**: Firebase Realtime Database
 
-In the output, you'll find options to open the app in a
+## Getting Started
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Prerequisites
+- Node.js
+- npm or Yarn
+- Expo CLI
+- Android Studio (for Android development)
+- Expo Go app (for iOS testing without a Mac)
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+### Installation
 
-## Get a fresh project
-
-When you're ready, run:
-
+1. Clone the repository:
 ```bash
-npm run reset-project
+git clone https://github.com/AMALIK8989/ridely_native.git
+cd ridely
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
 
-## Learn more
+3. Create a `.env` file based on `.env.example` and add your API keys:
+```
+FIREBASE_API_KEY=your-api-key
+FIREBASE_AUTH_DOMAIN=your-auth-domain
+FIREBASE_PROJECT_ID=your-project-id
+FIREBASE_STORAGE_BUCKET=your-storage-bucket
+FIREBASE_MESSAGING_SENDER_ID=your-messaging-sender-id
+FIREBASE_APP_ID=your-app-id
+FIREBASE_MEASUREMENT_ID=your-measurement-id
+GOOGLE_MAPS_API_KEY=your-google-maps-api-key
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+4. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+5. Run on device or emulator:
+```bash
+npm run android
+# or
+npm run ios # (Mac only)
+# or use Expo Go app on your device
+```
 
-## Join the community
+## Project Structure
 
-Join our community of developers creating universal apps.
+```
+ridely/
+├── src/
+│   ├── components/         # Reusable UI components
+│   ├── config/             # Configuration files
+│   ├── context/            # React Context for state management
+│   ├── navigation/         # Navigation configuration
+│   ├── screens/            # App screens
+│   │   ├── auth/           # Authentication screens
+│   │   ├── user/           # Rider screens
+│   │   └── driver/         # Driver screens
+│   ├── services/           # API and service functions
+│   └── utils/              # Utility functions
+├── assets/                 # Images, fonts, etc.
+├── app.json                # Expo configuration
+└── App.js                  # App entry point
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Future Enhancements
+
+- Multi-language support
+- In-app chat between driver and rider
+- Ride sharing options
+- Advanced analytics for drivers
+- Loyalty program for frequent users
+- Enhanced payment options
+
+## License
+
+[MIT License](LICENSE)
+
+## Acknowledgements
+
+- [Expo](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [Firebase](https://firebase.google.com/)
+- [Google Maps API](https://developers.google.com/maps)
